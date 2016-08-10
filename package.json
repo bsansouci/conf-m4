@@ -1,0 +1,7 @@
+{
+    "version": "0.0.0",
+    "name": "conf-m4",
+    "scripts": {
+        "postinstall": "eval $(dependencyEnv) && sh -exc echo | m4"
+    }
+}
