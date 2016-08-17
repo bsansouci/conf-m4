@@ -1,5 +1,6 @@
 {
-    "version": "0.0.0",
+    "optDependencies": {},
+    "name": "conf-m4",
     "exportedEnvVars": {
         "FINDLIB": {
             "global": true,
@@ -34,7 +35,7 @@
             "val": "enable"
         }
     },
-    "name": "conf-m4",
+    "version": "0.0.0",
     "dependencies": {
         "substs": "https://github.com/yunxing/substs.git",
         "nopam": "https://github.com/yunxing/nopam.git",
