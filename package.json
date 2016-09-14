@@ -1,5 +1,5 @@
 {
-    "name": "@yunxing-test/conf-m4",
+    "name": "conf-m4-actual",
     "exportedEnvVars": {
         "FINDLIB": {
             "global": true,
