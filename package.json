@@ -10,7 +10,7 @@
         "version": {
             "global": true,
             "globalCollisionBehavior": "clobber",
-            "val": "0.0.0"
+            "val": "4.1.0"
         },
         "conf_m4_installed": {
             "global": true,
@@ -26,7 +26,7 @@
         "conf_m4_version": {
             "global": true,
             "globalCollisionBehavior": "clobber",
-            "val": "0.0.0"
+            "val": "4.1.0"
         },
         "conf_m4_enable": {
             "global": true,
@@ -34,16 +34,17 @@
             "val": "enable"
         }
     },
-    "version": "0.0.0",
+    "version": "4.1.0",
     "dependencies": {
         "substs": "https://github.com/yunxing/substs.git",
         "nopam": "https://github.com/yunxing/nopam.git",
-        "ocaml": "https://github.com/npm-opam/ocaml.git#npm-4.02.3",
         "opam-installer-bin": "https://github.com/yunxing/opam-installer-bin.git",
         "dependency-env": "https://github.com/npm-ml/dependency-env.git"
     },
     "scripts": {
         "postinstall": "eval $(dependencyEnv) && nopam && sh -exc echo | m4 && (opam-installer --prefix=$opam_prefix || true)"
     },
-    "peerDependencies": {}
+    "peerDependencies": {
+        "@yunxing-test/ocaml": ">= 4.2.3"
+    }
 }
