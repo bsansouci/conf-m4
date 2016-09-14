@@ -1,28 +1,37 @@
 {
-    "name": "conf-m4",
-    "optionalDependencies": {},
+    "name": "@yunxing-test/conf-m4",
     "exportedEnvVars": {
-        "PATH": {
+        "FINDLIB": {
             "global": true,
             "resolveAsRelativePath": true,
             "globalCollisionBehavior": "joinPath",
-            "val": "./_build/ocamlfind/bin"
+            "val": "./_build/ocamlfind/lib"
         },
         "version": {
             "global": true,
             "globalCollisionBehavior": "clobber",
             "val": "0.0.0"
         },
+        "conf_m4_installed": {
+            "global": true,
+            "globalCollisionBehavior": "clobber",
+            "val": "true"
+        },
+        "PATH": {
+            "global": true,
+            "resolveAsRelativePath": true,
+            "globalCollisionBehavior": "joinPath",
+            "val": "./_build/ocamlfind/bin"
+        },
         "conf_m4_version": {
             "global": true,
             "globalCollisionBehavior": "clobber",
             "val": "0.0.0"
         },
-        "FINDLIB": {
+        "conf_m4_enable": {
             "global": true,
-            "resolveAsRelativePath": true,
-            "globalCollisionBehavior": "joinPath",
-            "val": "./_build/ocamlfind/lib"
+            "globalCollisionBehavior": "clobber",
+            "val": "enable"
         }
     },
     "version": "0.0.0",
@@ -34,6 +43,9 @@
         "dependency-env": "https://github.com/npm-ml/dependency-env.git"
     },
     "scripts": {
-        "postinstall": "eval $(dependencyEnv) && nopam && sh -exc echo | m4 && (opam-installer --prefix=$opam_prefix || true) && injectOpamEnvs"
+        "postinstall": "eval $(dependencyEnv) && nopam && sh -exc echo | m4 && (opam-installer --prefix=$opam_prefix || true)"
+    },
+    "peerDependencies": {
+        "@yunxing-test/ocaml": ">= 4.2.3"
     }
 }
