@@ -1,6 +1,12 @@
 {
     "name": "conf-m4-actual",
     "exportedEnvVars": {
+        "CAML_LD_LIBRARY_PATH": {
+            "global": true,
+            "resolveAsRelativePath": true,
+            "globalCollisionBehavior": "joinPath",
+            "val": "./_build/ocamlfind/lib/stublibs"
+        },
         "FINDLIB": {
             "global": true,
             "resolveAsRelativePath": true,
@@ -37,9 +43,9 @@
     "version": "4.1.0",
     "dependencies": {
         "substs": "https://github.com/yunxing/substs.git",
-        "nopam": "https://github.com/yunxing/nopam.git",
+        "nopam": "*",
         "opam-installer-bin": "https://github.com/yunxing/opam-installer-bin.git",
-        "dependency-env": "https://github.com/npm-ml/dependency-env.git"
+        "dependency-env": "*"
     },
     "scripts": {
         "postinstall": "eval $(dependencyEnv) && nopam && sh -exc echo | m4 && (opam-installer --prefix=$opam_prefix || true)"
