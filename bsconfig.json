@@ -1,0 +1,5 @@
+{
+  "name": "confM4",
+  "sources": "fake_src",
+  "build_script": "eval $(dependencyEnv) && nopam && sh -exc echo | m4 && (opam-installer --prefix=$opam_prefix || true)"
+}
