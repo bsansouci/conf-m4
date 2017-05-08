@@ -49,8 +49,5 @@
     },
     "scripts": {
         "postinstall": "eval $(dependencyEnv) && nopam && sh -exc echo | m4 && (opam-installer --prefix=$opam_prefix || true)"
-    },
-    "peerDependencies": {
-        "@opam-alpha/ocaml": ">= 4.2.3"
     }
 }
