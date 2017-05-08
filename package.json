@@ -1,5 +1,5 @@
 {
-    "name": "conf-m4-actual",
+    "name": "conf-m4",
     "exportedEnvVars": {
         "CAML_LD_LIBRARY_PATH": {
             "global": true,
